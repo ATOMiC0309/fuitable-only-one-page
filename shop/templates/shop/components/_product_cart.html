@@ -1,0 +1,29 @@
+<div class="col-md-6 col-lg-4 col-xl-3">
+                                    <div class="rounded position-relative fruite-item">
+                                        <div class="fruite-img">
+                                            {% if product.image %}
+                                            <img src="{{ product.image.url }}"
+                                                 class="img-fluid w-100 rounded-top" alt="">
+                                            {% else %}
+                                            <img src="https://qph.cf2.quoracdn.net/main-qimg-1a4bafe2085452fdc55f646e3e31279c-lq"
+                                                 class="img-fluid w-100 rounded-top" alt="">
+                                            {% endif %}
+                                        </div>
+                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
+                                             style="top: 10px; left: 10px;">{{ product.category }}
+                                        </div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4>{{ product.name }}</h4>
+                                            <p>
+                                                {{ product.description|truncatewords:5 }}
+                                            </p>
+                                            <div class="d-flex justify-content-between flex-lg-wrap">
+                                                <p class="text-dark fs-5 fw-bold mb-0">${{ product.price}} / kg</p>
+                                                <a href="#"
+                                                   class="btn border border-secondary rounded-pill px-3 text-primary"><i
+                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to
+                                                    cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
